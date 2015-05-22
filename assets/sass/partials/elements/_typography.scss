@@ -1,0 +1,56 @@
+body {
+	font-family: $font-default;
+	font-size: $font-size; //default 16px
+	background: $body-background;
+	color: $body-text;
+	line-height: $line-height;
+}
+
+/////////////////////////////////////////////////////////////////
+//HEADINGS
+
+h1,
+h2, 
+h3,
+h4, 
+h5 {
+	font-family: $font-heading;
+}
+
+h1 {
+	font-size: em(35);
+}
+
+h2 {
+	font-size: em(24);
+}
+
+h3 {
+	font-size: em(19);
+}
+
+h4 {
+	font-size: em(14);
+}
+
+h5 {
+	font-size: em(13);
+}
+
+/////////////////////////////////////////////////////////////////
+//GENERIC CONTENT
+
+p {
+	margin: $spacing 0;
+}
+
+small {
+	font-size: em(10);
+}
+
+a {
+	background: transparent; //Remove the gray background color from active links in IE 10.
+	&:hover, &:active {
+		outline:0; //Improve readability when focused and also mouse hovered in all browsers.
+	}
+}

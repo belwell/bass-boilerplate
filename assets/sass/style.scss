@@ -1,0 +1,35 @@
+/*# sourceMappingURL=style.css.map */
+
+// MAJOR FUNCTIONALITY
+//Eric Meyer's CSS reset
+@import "partials/settings/reset";
+//site settings (colours, paddings etc)
+@import "partials/settings/site-settings";
+//mixins in Zone boilerplate
+@import "partials/settings/functions";
+
+/////////////////////////////////////////////////////////////////
+//GRID
+
+//grid settings (custom)
+@import "partials/grid/grid-settings";
+//responsive column functionality
+@import "partials/grid/colspans-responsive";
+
+/////////////////////////////////////////////////////////////////
+//SECTIONS
+
+@import "partials/frame/header";
+@import "partials/frame/footer";
+
+/////////////////////////////////////////////////////////////////
+//ELEMENTS
+
+@import "partials/elements/typography";
+@import "partials/elements/images";
+@import "partials/elements/buttons";
+@import "partials/elements/lists";
+@import "partials/elements/forms";
+
+/////////////////////////////////////////////////////////////////
+// CUSTOM

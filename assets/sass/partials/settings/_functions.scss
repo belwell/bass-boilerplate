@@ -1,0 +1,58 @@
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+}
+
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin border-radius($radius) {//@include border-radius(5px);
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  /* Prevent background color leak outs */
+  -webkit-background-clip: padding-box; 
+  -moz-background-clip:    padding; 
+  background-clip:         padding-box;
+}
+
+@mixin hp-opacity($trans) { //@include hp-opacity(.8);
+  filter: alpha(opacity=($trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  opacity: $trans;
+}
+
+@mixin transition($transition-property, $transition-time, $method) { //@include transition(all, 0.2s, ease-in-out);
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
+@mixin box-shadow($horizontal, $vertical, $blur, $color) { //@include box-shadow(0px, 1px, 2px, #ccc);
+  -webkit-box-shadow: $horizontal $vertical $blur $color;
+  -moz-box-shadow: $horizontal $vertical $blur $color;
+  box-shadow: $horizontal $vertical $blur $color;
+}
+
+@mixin inset-box-shadow($horizontal, $vertical, $blur, $color) { //@include inset-box-shadow(0px, 1px, 2px, #ccc);
+  -webkit-box-shadow: inset $horizontal $vertical $blur $color;
+  -moz-box-shadow: inset $horizontal $vertical $blur $color;
+  box-shadow: inset $horizontal $vertical $blur $color;
+}
+
+@mixin no-box-shadow($horizontal: 0px, $vertical: 0px, $blur: 0px, $color: transparent) {//@include no-box-shadow;
+  -webkit-box-shadow: inset $horizontal $vertical $blur $color;
+  -moz-box-shadow: inset $horizontal $vertical $blur $color;
+  box-shadow: inset $horizontal $vertical $blur $color;
+}

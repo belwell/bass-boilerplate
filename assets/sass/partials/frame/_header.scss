@@ -1,0 +1,9 @@
+html {
+	//Prevent iOS text size adjust after orientation change, without disabling user zoom.
+	-ms-text-size-adjust: 100%; 
+	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
+	*, *:before, *:after {
+	  box-sizing: inherit;
+	}
+}
